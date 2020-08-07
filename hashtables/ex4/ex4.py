@@ -28,8 +28,8 @@ def has_negatives(a):
     my_dict = {}
     answers = []
 
-    for x in len(a):
-        check = my_dict.get(0 - my_dict[x])
+    for x in a:
+        check = my_dict.get(0 - x)
         if check:
             if x > 0:
                 answers.append(x)
@@ -38,7 +38,7 @@ def has_negatives(a):
         else:
             my_dict[x] = x
 
-    return result
+    return answers
 
 
 if __name__ == "__main__":
