@@ -68,9 +68,9 @@ def reconstruct_trip(tickets, length):
     for tic in tickets:
         my_dict[tic.source] = tic.destination
 
-    current_airport = None
+    current_airport = "NONE"
     for x in range(length):
-        destination = my_dict.get(current_airport)
+        destination = my_dict[current_airport]
         route.append(destination)
         current_airport = destination
         
