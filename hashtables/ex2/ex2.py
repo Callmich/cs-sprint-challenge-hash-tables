@@ -57,10 +57,22 @@ class Ticket:
 
 def reconstruct_trip(tickets, length):
     # set up a dictionary with the tickets
+    # use a for loop for the length of the tickets
+        # set the current airport to None.
+        # find the current airpoirt
+        # append the destination into the route
+        # change the current airport to the destination and go through the loop
     my_dict = {}
+    route = []
 
     for tic in tickets:
         my_dict[tic.source] = tic.destination
 
+    current_airport = None
+    for x in range(length):
+        destination = my_dict.get(current_airport)
+        route.append(destination)
+        current_airport = destination
+        
 
     return route
