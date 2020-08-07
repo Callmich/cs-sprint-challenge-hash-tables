@@ -29,6 +29,7 @@ def intersection(arrays):
     
     match_num = len(arrays)
     my_dict = {}
+    result = []
 
     # for arr in arrays:
     #     for x in range(len(arr)):
@@ -48,6 +49,9 @@ def intersection(arrays):
             if my_dict.get(x):
                 my_dict[x] += 1
 
+    for key in my_dict:
+        if my_dict[key] == match_num:
+            result.append(key)
 
     return result
 
