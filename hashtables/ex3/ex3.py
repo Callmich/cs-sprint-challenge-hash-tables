@@ -27,6 +27,27 @@ def intersection(arrays):
     
     # then I'll need a way to check the dictionary for all keys whose values match the length of the inital array
     
+    match_num = len(arrays)
+    my_dict = {}
+
+    # for arr in arrays:
+    #     for x in range(len(arr)):
+    #         if not my_dict.get(x):
+    #             my_dict[x] = 1
+    # ******** I just need to set up the inital dictionary with the first Array!
+
+
+    first_array = arrays[0]
+    rest_arrays = arrays[1:]
+
+    for x in first_array:
+        my_dict[x] = 1
+
+    for arr in rest_arrays:
+        for x in range(len(arr)):
+            if my_dict.get(x):
+                my_dict[x] += 1
+
 
     return result
 
