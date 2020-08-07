@@ -25,6 +25,19 @@ def has_negatives(a):
     # if there isnt one there then the number is added to the dictionary
     # print answer array
 
+    my_dict = {}
+    answers = []
+
+    for x in len(a):
+        check = my_dict.get(0 - my_dict[x])
+        if check:
+            if x > 0:
+                answers.append(x)
+            else:
+                answers.append(x * -1)
+        else:
+            my_dict[x] = x
+
     return result
 
 
