@@ -53,9 +53,9 @@ def get_indices_of_item_weights(weights, length, limit):
 
     for x in range(length):
         is_it_there = my_dict.get(limit - weights[x])
-        if not is_it_there:
-            my_dict[weights[x]] = x
-        else:
+        if is_it_there != None:
             return (x, is_it_there)
-
+        else:
+            my_dict[weights[x]] = x
+            
     return None
