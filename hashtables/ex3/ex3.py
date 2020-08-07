@@ -45,7 +45,7 @@ def intersection(arrays):
         my_dict[x] = 1
 
     for arr in rest_arrays:
-        for x in range(len(arr)):
+        for x in arr:
             if my_dict.get(x):
                 my_dict[x] += 1
 
