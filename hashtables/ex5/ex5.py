@@ -49,8 +49,9 @@ def finder(files, queries):
     result = []
 
     for fle in files:
-        fle.split('/')
-        my_dict[fle[-1]] = fle
+        splt = fle.split('/')
+        my_dict[splt[-1]] = fle
+
 
     return result
 
