@@ -52,6 +52,10 @@ def finder(files, queries):
         splt = fle.split('/')
         my_dict[splt[-1]] = fle
 
+    for src in queries:
+        in_there = my_dict.get(src)
+        if in_there:
+            result.append(in_there)
 
     return result
 
